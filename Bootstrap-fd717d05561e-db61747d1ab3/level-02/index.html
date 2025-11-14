@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bit Academy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      .list-image-row {
+        display: flex;
+        align-items: flex-start;
+        gap: 40px;
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+      }
+
+      .right-side {
+        display: flex;
+        gap: 40px;
+        align-items: flex-start;
+      }
+
+      .right-image-container {
+        background: linear-gradient(135deg, #FFD700, #FFA500);
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 450px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      }
+
+      .right-image {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+
+      .company-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding-left: 0;
+        margin: 0;
+      }
+
+      .company-list li {
+        list-style: none;
+        padding: 8px 12px;
+        background-color: #f0f0f0;
+        border-radius: 6px;
+        font-weight: 500;
+      }
+
+      /* Formulierstijl */
+      form {
+        background-color: #fff8dc;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        font-size: 1.1rem;
+        width: 350px;
+      }
+
+      form label {
+        font-weight: 600;
+      }
+
+      form input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+      }
+
+      form input[type="button"],
+      form input[type="submit"] {
+        padding: 10px 20px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+
+      form input[type="button"] {
+        background-color: #ccc;
+        margin-right: 10px;
+      }
+
+      form input[type="submit"] {
+        background-color: #FFD700;
+      }
+
+      form input[type="button"]:hover {
+        background-color: #bbb;
+      }
+
+      form input[type="submit"]:hover {
+        background-color: #ffcc00;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg" style="background-color: #FFD700;">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="bitlogo.svg" alt="Bit Academy" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container my-5">
+      <h1>Word developer.<br>Verdien goed.<br>Bouw aan je toekomst<br></h1>
+      <p>Bit Academy is méér bedrijfsleven dan elke vergelijkbare opleiding. Word
+      een kick-ass programmeur en bouw mee aan een waardevolle toekomst, ook voor jezelf.</p>
+
+      <div class="list-image-row">
+        <div>
+          <h2>Bedrijven waar je kan werken</h2>
+          <ul class="company-list">
+            <li>Google</li>
+            <li>Microsoft</li>
+            <li>Apple</li>
+            <li>Amazon</li>
+            <li>Facebook / Meta</li>
+            <li>Netflix</li>
+            <li>Tesla</li>
+            <li>Adobe</li>
+            <li>IBM</li>
+            <li>Intel</li>
+          </ul>
+        </div>
+
+        <div class="right-side">
+          <div class="right-image-container">
+            <img src="byte.png" alt="Bit Academy" class="right-image">
+          </div>
+
+          <form>
+            <h4 style="margin-bottom: 15px;">Aanmeldformulier</h4>
+            <label for="fname">Voor- en achternaam:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">E-mailadres:</label><br>
+            <input type="text" id="lname" name="lname"><br>
+            <input type="button" value="Preview">
+            <input type="submit" value="Versturen">
+          </form>
+        </div>
+      </div>
+    </div>
+     <div class="footer">
+      <footer>
+        <p><a href="mailto:bitacademy.com">Bit@academy.com</a></p>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

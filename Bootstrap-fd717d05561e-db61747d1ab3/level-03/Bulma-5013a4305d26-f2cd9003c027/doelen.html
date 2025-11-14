@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bit Academy Dagdoelen App</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+  <style>
+  body { background-color: #fff8dc; }
+
+  .heading-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+
+  .heading-left {
+    flex: 1 1 320px;
+    min-width: 240px;
+  }
+
+  .pigeon-right {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    flex-wrap: nowrap;
+  }
+
+  .pigeon-ascii {
+    font-family: "Courier New", monospace;
+    white-space: pre;
+    background-color: #fff8dc; /* zelfde als body */
+    color: #000;
+    font-size: 12px;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* 🔹 Terug naar originele grootte van het plaatje */
+  .pigeon-img {
+    max-width: 450px;
+    height: auto;
+  }
+
+  @media (max-width: 900px) {
+    .pigeon-right {
+      flex-direction: column;
+      align-items: center;
+    }
+    .pigeon-ascii { font-size: 11px; }
+    .pigeon-img { max-width: 300px; } /* iets kleiner voor mobiel */
+  }
+
+  .goal-card { margin-bottom: 1rem; }
+  .approved { border-left: 5px solid #48c774; }
+  .rejected { border-left: 5px solid #f14668; }
+  .btn-full { width: 100%; }
+
+  .navbar-item img.logo { height: 80px; width: auto; }
+  @media (min-width: 900px) { .navbar-item img.logo { height: 110px; } }
+</style>
+
+</head>
+<body>
+  <nav class="navbar is-warning mb-4" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="#">
+        <img src="bird-academy.png" alt="Bit Academy Logo" class="logo">
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarBasic" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="index.html">Home</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      <div class="heading-row">
+        <div class="heading-left">
+          <h1 class="title">Mijn Dagdoelen</h1>
+          <p class="subtitle">Bekijk en stel je doelen voor vandaag.</p>
+        </div>
+        <div class="pigeon-right">
+          <!-- ASCII duif links van het plaatje -->
+          <pre class="pigeon-ascii" aria-hidden="true">
+                           .-''-.
+                          / ,    \
+                       .-'`(o)    ;
+                      '-==.       |
+                           `._...-;-.
+                            )--"""   `-.
+                           /   .        `-.
+                          /   /      `.    `-.
+                          |   \    ;   \      `-._________
+                          |    \    `.`.;          -------`.
+                           \    `-.   \\          `---...|
+                            `.     `-. ```\.--'._   `---...|
+                              `-.....7`-.))\     `-._`-.. /
+                                `._\ /   `-`         `-.,'
+                                  / /
+                                 /=(_
+                              -./--' `
+                         ,^-(_
+                            ,--' `
+          </pre>
+
+          <!-- origineel duivenplaatje blijft aanwezig -->
+          <img src="pidgeon.png" alt="Duif" class="pigeon-img">
+        </div>
+      </div>
+
+      <div class="box goal-card approved">
+        <p><strong>Doel:</strong> Bootstrap beginner</p>
+        <p><small>Tijd: 09:00 - 12:00</small></p>
+        <span class="tag is-success">Goedgekeurd</span>
+      </div>
+
+      <div class="box goal-card rejected">
+        <p><strong>Doel:</strong> Javascript beginner afmaken</p>
+        <p><small>Tijd: 13:00 - 15:00</small></p>
+        <span class="tag is-danger">Afgekeurd</span>
+      </div>
+
+      <div class="box">
+        <h2 class="title is-5">Nieuw Dagdoel Insturen</h2>
+        <form>
+          <div class="field">
+            <label class="label">Jouw naam</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Voor- en achternaam">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Dagdoel</label>
+            <div class="control">
+              <textarea class="textarea" placeholder="Wat wil je vandaag bereiken?"></textarea>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Tijd</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Bijv. 09:00 - 12:00">
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="control">
+              <button class="button is-warning btn-full" type="submit">Verstuur doel</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="box">
+        <h2 class="title is-5">Coach Beoordeling</h2>
+        <p><strong>Student:</strong> Sem de goat</p>
+        <p><strong>Voorgesteld doel:</strong> Node.js leren en API bouwen</p>
+
+        <div class="buttons mt-3">
+          <button class="button is-success">Goedkeuren</button>
+          <button class="button is-danger">Afkeuren</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer has-background-warning-light">
+    <div class="content has-text-centered">
+      <p><strong>Bit Academy</strong> - Dagdoelen App &copy; 2025</p>
+    </div>
+  </footer>
+
+  <script>
+    // Hamburger menu 
+    document.addEventListener('DOMContentLoaded', () => {
+      const burgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+      if (burgers.length > 0) {
+        burgers.forEach(el => {
+          el.addEventListener('click', () => {
+            const target = document.getElementById(el.dataset.target);
+            el.classList.toggle('is-active');
+            target.classList.toggle('is-active');
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>
